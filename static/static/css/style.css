@@ -1,0 +1,20 @@
+body {
+    background-color: #f4f4f9;
+}
+h1 {
+    color: #333;
+}
+.table {
+    margin-top: 30px;
+}
+.unknown-face img {
+    margin-top: 20px;
+    max-width: 100px;
+    max-height: 100px;
+}
+.status-light-on {
+    color: green;
+}
+.status-light-off {
+    color: red;
+}
