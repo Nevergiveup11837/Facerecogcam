@@ -42,9 +42,7 @@ Chào mừng bạn đến với hướng dẫn sử dụng sản phẩm Thiết 
 
 ## Liên Hệ Hỗ Trợ
 
-Nếu bạn gặp bất kỳ vấn đề nào hoặc cần thêm thông tin, vui lòng liên hệ với chúng tôi qua:
-
-- **Email:** nguyenquanganh460@gmail.com
+Nếu bạn gặp bất kỳ vấn đề nào hoặc cần thêm thông tin, vui lòng liên hệ qua:
 - **Điện thoại:** 0936249568 (ZALO)
 
 ---
