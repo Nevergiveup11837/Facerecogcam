@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .image-container img {
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 45%;
+        }
+        .image-container img:hover {
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Face Recognition System</h1>
+    
+    <div id="status" class="text-center mt-4">
+        <h2>System Status: <span id="light-status">Waiting...</span></h2>
+    </div>
+
+    <div class="image-container">
+        <div>
+            <h3>Original Image</h3>
+            <img id="original-image" src="" alt="Original Image">
+        </div>
+        <div>
+            <h3>Processed Image</h3>
+            <img id="processed-image" src="" alt="Processed Image">
+        </div>
+    </div>
+
+    <div id="recognized-faces" class="mt-4 text-center">
+        <h3>Recognized Faces:</h3>
+        <p id="recognized-names">None</p>
+    </div>
+
+    <div id="unknown-faces" class="mt-4 text-center">
+        <h3>Unknown Faces:</h3>
+        <div id="unknown-names">None</div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    function updateStream() {
+        $.getJSON("/stream", function(data) {
+            $("#light-status").text(data.status);
+            $("#recognized-names").text(data.recognized_faces.join(", ") || "None");
+
+            // Update unknown faces images
+            let unknownImages = "";
+            data.unknown_faces.forEach((facePath, index) => {
+                unknownImages += `<img src="${facePath}" alt="Unknown Face ${index + 1}" style="width:100px;"> `;
+            });
+            $("#unknown-names").html(unknownImages || "None");
+
+            $("#original-image").attr("src", "/" + data.original_image);
+            $("#processed-image").attr("src", "/" + data.processed_image);
+        });
+    }
+
+    setInterval(updateStream, 1000); // Update every 1 second
+</script>
+</body>
+</html>
