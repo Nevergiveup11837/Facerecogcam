@@ -25,9 +25,8 @@ Chào mừng bạn đến với hướng dẫn sử dụng sản phẩm Thiết 
 
 ### Bước 3: Khởi Động
 - Chỉ cần cắm nguồn điện và thiết bị sẽ khởi động và kết nối vào wifi
--  **Lưu ý, tên và mật khẩu mặc định của wifi mà thiết bị kết nối là: SSID: noname ; PSK: 12345678** . Giám khảo cần phát wifi trên máy chủ sẽ xử lý dữ liệu, cách làm (cho Windows 11) ở ảnh dưới
--  """""Picture""""""
--  Quan trọng, ở bước này, giám khảo phải thực hiện cài phần mềm trên máy chủ để xử lý (tuy nhiên phần mềm chạy sẽ rất nhẹ nên có thể chạy trên Laptop(gaming) hoặc máy bàn nếu muốn)
+-  **Lưu ý, tên và mật khẩu mặc định của wifi mà thiết bị kết nối là: SSID: noname ; PSK: 12345678** . Giám khảo cần phát wifi trên máy chủ sẽ xử lý dữ liệu, cách làm (cho Windows 11) ở video kèm trong trang tài liệu này
+-  Tuy nhiên ở bước này, giám khảo phải thực hiện cài phần mềm trên máy chủ để xử lý (tuy nhiên phần mềm chạy sẽ rất nhẹ nên có thể chạy trên Laptop(gaming) hoặc máy bàn nếu muốn)
 -  Tại thư mục vừa tải về, mở cửa sổ terminal (trên window, với đường dẫn tới thư mục và quyền admin) và làm các bước sau:
 -  Nhập lệnh 
   ``pip install -r tinsta.txt`` và chờ để hệ thống tải thư viện cần thiết để chạy chương trình
