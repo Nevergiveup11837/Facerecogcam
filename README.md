@@ -26,7 +26,7 @@ Chào mừng bạn đến với hướng dẫn sử dụng sản phẩm Thiết 
 -  Tuy nhiên ở bước này, giám khảo phải thực hiện cài phần mềm trên máy chủ để xử lý (tuy nhiên phần mềm chạy sẽ rất nhẹ nên có thể chạy trên Laptop(gaming) hoặc máy bàn nếu muốn)
 -  Tại thư mục vừa tải về, mở cửa sổ terminal (trên window, với đường dẫn tới thư mục và quyền admin) và làm các bước sau:
 -  Nhập lệnh  ``pip install -r requirements.txt`` và chờ để hệ thống tải thư viện cần thiết để chạy chương trình
-- Sau khi cài đặt thư viện cần thiết, truy cập vào mobile hotspot trên windows 11, lấy ip của camera (ảnh đính kèm), sau đó, trong file app.py , tại biến ESP_CAM_IP, thay chuỗi số 192.168.137.208 thành ip mà giám khảo thấy(ảnh đính kèm), lưu ý, mỗi lần thiết bị cam khởi động lại, sẽ kết nối vào mạng bằng ip khác (vì lý do bảo mật)
+- Sau khi cài đặt thư viện cần thiết, truy cập vào mobile hotspot trên windows 11, lấy ip của camera (ảnh đính kèm), sau đó, trong file app.py , tại biến ESP_CAM_IP, thay chuỗi số 192.168.137.208 thành ip mà giám khảo thấy(ảnh đính kèm), chỉ thay phần số, không thay chữ, lưu ý, mỗi lần thiết bị cam khởi động lại, sẽ kết nối vào mạng bằng ip khác (vì lý do bảo mật)
 - Sau khi tải xong nhập lệnh ``python app.py``
 
 
