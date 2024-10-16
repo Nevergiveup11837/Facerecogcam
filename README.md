@@ -1,7 +1,4 @@
 # Hướng Dẫn Sử Dụng Sản Phẩm Thiết Bị Giúp Nhận Diện Khuôn Mặt và Điểm Danh
-
-![Hình ảnh sản phẩm](link-to-your-image.jpg) <!-- Thay đổi link đến hình ảnh sản phẩm của bạn -->
-
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn sử dụng sản phẩm Thiết bị giúp nhận diện khuôn mặt và điểm danh! Tài liệu này sẽ giúp bạn hiểu rõ hơn về cách sử dụng sản phẩm một cách hiệu quả nhất.
 
@@ -25,18 +22,18 @@ Chào mừng bạn đến với hướng dẫn sử dụng sản phẩm Thiết 
 
 ### Bước 3: Khởi Động
 - Chỉ cần cắm nguồn điện và thiết bị sẽ khởi động và tự kết nối vào wifi
--  **Lưu ý, tên và mật khẩu mặc định của wifi mà thiết bị kết nối là: SSID: noname ; PSK: 12345678** . Giám khảo cần phát wifi trên máy chủ sẽ xử lý dữ liệu, cách làm (cho Windows 11) ở video kèm trong trang tài liệu này
+-  **Lưu ý, tên và mật khẩu mặc định của wifi mà thiết bị kết nối là: SSID: noname ; PSK: 12345678** . Giám khảo cần phát wifi trên máy chủ sẽ xử lý dữ liệu (ảnh đính kèm)
 -  Tuy nhiên ở bước này, giám khảo phải thực hiện cài phần mềm trên máy chủ để xử lý (tuy nhiên phần mềm chạy sẽ rất nhẹ nên có thể chạy trên Laptop(gaming) hoặc máy bàn nếu muốn)
 -  Tại thư mục vừa tải về, mở cửa sổ terminal (trên window, với đường dẫn tới thư mục và quyền admin) và làm các bước sau:
--  Nhập lệnh 
-  ``pip install -r requirements.txt`` và chờ để hệ thống tải thư viện cần thiết để chạy chương trình
+-  Nhập lệnh  ``pip install -r requirements.txt`` và chờ để hệ thống tải thư viện cần thiết để chạy chương trình
+- Sau khi cài đặt thư viện cần thiết, truy cập vào mobile hotspot trên windows 11, lấy ip của camera (ảnh đính kèm), sau đó, trong file app.py , tại biến ESP_CAM_IP, thay chuỗi số 192.168.137.208 thành ip mà giám khảo thấy(ảnh đính kèm), lưu ý, mỗi lần thiết bị cam khởi động lại, sẽ kết nối vào mạng bằng ip khác (vì lý do bảo mật)
 - Sau khi tải xong nhập lệnh ``python app.py``
 
 
 ### Bước 4: Sử Dụng
 - Sau khi thực hiện bước 3 thành công và chương trình không báo lỗi, trên máy chủ đang chạy chương trình, mở trình duyệt web và nhập ``localhost:5000`` , khi này sẽ được đưa tới trang web nơi chương trình đang chạy
 - Nếu muốn truy cập web trên thiết bị khác, hãy đảm bảo thiết bị được kết nối vào cùng mạng với máy chủ (SSID:noname ; PSK:12345678) và mở trình duyệt, nhập <ip máy chủ đang chạy>:5000 
-- Để biết được ip máy chủ , mở terminal của máy chủ và nhập ``ipconfig`` sẽ nhận được một địa chỉ có mẫu đại loại như 192.168.x.x ( có video hướng dẫn được kèm sẵn)
+- Để biết được ip máy chủ , mở terminal của máy chủ và nhập ``ipconfig`` sẽ nhận được một địa chỉ có mẫu đại loại như 192.168.x.x ( ảnh đính kèm)
 
 - Về phần thêm khuôn mặt mới, giám khảo chuẩn bị một hình ảnh chụp khuôn mặt người cần nhận diện thật rõ ràng, lưu vào máy tính chủ, sau đó truy cập vào thư mục của phần mềm, mở terminal tại đó, chạy lệnh ``python newface.py`` sau đó nhập đường dẫn tới hình ảnh và kế tiếp là tên người trong ảnh (Lưu ý, để đảm bảo có thể thực hiện lặp lại nhiều lần với nhiều ảnh chụp góc khác nhau, diều kiện ánh sáng khác nhau cũng cùng 1 người để tăng độ chính xác,thông thường chỉ cần 1 hình ảnh rõ ràng là đã có thể nhận diện với dộ chính xác 85%(đeo kính) và 92%(không kính), nhưng cần lưu ý tên nhập phải giống nhau (do tên nhập là thứ phần mềm dùng như một mã để xác định người))
 
